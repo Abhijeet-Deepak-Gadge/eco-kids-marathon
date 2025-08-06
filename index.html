@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marathon Website</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <!-- Fancybox JS -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    
+
+    <!--JavaScript-->
+    <script src="main.js" ></script>
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <!--Body  Starts-->
+  <body class="bg-gray-100 text-gray-800">
+
+    <!-- Sticky Countdown -->
+  <div id="countdownBar">
+    <span class="font-semibold">🏃‍♂️ Marathon Starts In:</span>
+    <div class="countdown-item">
+      <span id="sticky-days" class="countdown-value">00</span>
+      <span class="countdown-label">Days</span>
+    </div>
+    <div class="countdown-item">
+      <span id="sticky-hours" class="countdown-value">00</span>
+      <span class="countdown-label">Hours</span>
+    </div>
+    <div class="countdown-item">
+      <span id="sticky-minutes" class="countdown-value">00</span>
+      <span class="countdown-label">Minutes</span>
+    </div>
+    <div class="countdown-item">
+      <span id="sticky-seconds" class="countdown-value">00</span>
+      <span class="countdown-label">Seconds</span>
+    </div>
+  </div>
+
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+    <!-- Header with Background Image -->
+    <header class="relative w-full h-[60vh] md:h-[80vh] bg-cover bg-center bg-no-repeat flex items-center justify-center text-white" style="background-image: url('image/img1.png');">
+      <div class="bg-black/50 w-full h-full absolute top-0 left-0 z-0"></div>
+      <div class="relative z-10 text-center">
+        <h1 class="text-3xl md:text-5xl font-bold">Welcome to the EcoKids Marathon</h1>
+        <p class="text-lg mt-4">Ready to join the Marathon?</p>
+        <a href="https://www.townscript.com/e/eco-kids-dash-mini-marathon-113040" target="_blank"
+            class="inline-flex items-center px-5 py-2 bg-gradient-to-r from-blue-500 to-blue-500 text-white font-semibold rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out">
+            <svg class="w-5 h-5 mr-2 animate-pulse" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+            </svg>
+            Register Now
+        </a>
+      </div>
+    </header>
+
+
+    <!-- Marathon Event Details Section with AOS -->
+    <section class="py-10">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
+        🏃‍♂️ Marathon Event Details
+        </h2>
+
+        <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div data-aos="fade-up" class="bg-blue-100 p-6 rounded-lg shadow-md text-center transform transition duration-300 hover:scale-105">
+            <div class="text-4xl mb-2">📍</div>
+            <h4 class="font-semibold text-lg mb-1">Location</h4>
+            <p class="text-sm text-gray-700">Shivaji nagar Police Ground, Pune</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100" class="bg-blue-100 p-6 rounded-lg shadow-md text-center transform transition duration-300 hover:scale-105">
+            <div class="text-4xl mb-2">📅</div>
+            <h4 class="font-semibold text-lg mb-1">Date & Time</h4>
+            <p class="text-sm text-gray-700">5 October 2025 | 6:00 AM</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="200" class="bg-blue-100 p-6 rounded-lg shadow-md text-center transform transition duration-300 hover:scale-105">
+            <div class="text-4xl mb-2">👥</div>
+            <h4 class="font-semibold text-lg mb-1">Organizers</h4>
+            <p class="text-sm text-gray-700">10+ Team Members</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="300" class="bg-blue-100 p-6 rounded-lg shadow-md text-center transform transition duration-300 hover:scale-105">
+            <div class="text-4xl mb-2">🏁</div>
+            <h4 class="font-semibold text-lg mb-1">Event Type</h4>
+            <p class="text-sm text-gray-700">1mile & 3km & 5km Run</p>
+        </div>
+        </div>
+    </div>
+    </section>
+
+
+
+    <!-- Image Gallery -->
+    <section class="container mx-auto px-4 py-10">
+      <h2 class="text-xl md:text-3xl font-semibold text-center mb-8">Gallery</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <a data-fancybox="gallery" href="image/img1.png">
+        <img src="image/img1.png" class="w-full h-auto rounded-lg shadow cursor-pointer" alt="Gallery 1" />
+        </a>
+        <a data-fancybox="gallery" href="image/img2.png">
+        <img src="image/img2.png" class="w-full h-auto rounded-lg shadow cursor-pointer" alt="Gallery 1" />
+        </a>
+        <a data-fancybox="gallery" href="image/img3.png">
+        <img src="image/img3.png" class="w-full h-auto rounded-lg shadow cursor-pointer" alt="Gallery 1" />
+        </a>
+        <a data-fancybox="gallery" href="image/img4.png">
+        <img src="image/img4.png" class="w-full h-auto rounded-lg shadow cursor-pointer" alt="Gallery 1" />
+        </a>
+        <a data-fancybox="gallery" href="image/img5.png">
+        <img src="image/img5.png" class="w-full h-auto rounded-lg shadow cursor-pointer" alt="Gallery 1" />
+        </a>
+        <a data-fancybox="gallery" href="image/img6.png">
+        <img src="image/img6.png" class="w-full h-auto rounded-lg shadow cursor-pointer" alt="Gallery 1" />
+        </a>
+        <a data-fancybox="gallery" href="image/img7.png">
+        <img src="image/img7.png" class="w-full h-auto rounded-lg shadow cursor-pointer" alt="Gallery 1" />
+        </a>
+        <a data-fancybox="gallery" href="image/img8.png">
+        <img src="image/img8.png" class="w-full h-auto rounded-lg shadow cursor-pointer" alt="Gallery 1" />
+        </a>
+        <a data-fancybox="gallery" href="image/img9.png">
+        <img src="image/img9.png" class="w-full h-auto rounded-lg shadow cursor-pointer" alt="Gallery 1" />
+        </a>
+        
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white text-center py-1 text-sm">
+    <p class="font-medium">&copy; 2025 All rights reserved.</p>
+    <p>Website design & developed by <strong>Abhijeet Gadge</strong></p>
+
+    <div class="mt-1 flex justify-center items-center gap-3 flex-wrap">
+        <a href="tel:+917338224842" class="hover:underline flex items-center gap-1">
+        📞 <span>+91 7338224842</span>
+        </a>
+        <span>|</span>
+        <a href="mailto:abhijeetgadge109@gmail.com" class="hover:underline flex items-center gap-1">
+        📧 <span>abhijeetgadge109@gmail.com</span>
+        </a>
+    </div>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,121 @@
+/* General font */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- IMAGE HOVER ---------- */
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+/* ---------- EVENT CARD GRID ---------- */
+.event-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .event-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-card {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .event-card h4 {
+    font-size: 1rem;
+  }
+
+  .event-card p {
+    font-size: 0.875rem;
+  }
+}
+
+/* ---------- EVENT CARD STYLE ---------- */
+.event-card {
+  background-color: #e0f2fe;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: scale(1.03);
+}
+
+/* ---------- COUNTDOWN STICKY BAR ---------- */
+#countdownBar {
+  position: sticky;
+  top: 0;
+  background-color: #335bc9; /* Indigo-700 */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.75rem -1rem;
+  font-size: 1rem;
+  z-index: 50;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Countdown Item Layout */
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+}
+
+.countdown-value {
+  font-size: 1.25rem;
+}
+
+.countdown-label {
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+/* ---------- ANIMATION ---------- */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out forwards;
+}
+
+.delay-75 {
+  animation-delay: 0.2s;
+}
+.delay-100 {
+  animation-delay: 0.4s;
+}
+.delay-150 {
+  animation-delay: 0.6s;
+}
