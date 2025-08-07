@@ -17,7 +17,7 @@
     
 
     <!--JavaScript-->
-    <script src="main.js" ></script>
+    <script src="main.js" defer ></script>
 
     <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -26,31 +26,33 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
-  </head>
+
+</head>
 
   <!--Body  Starts-->
   <body class="bg-gray-100 text-gray-800">
 
-    <!-- Sticky Countdown -->
-  <div id="countdownBar">
-    <span class="font-semibold">🏃‍♂️ Marathon Starts In:</span>
-    <div class="countdown-item">
-      <span id="sticky-days" class="countdown-value">00</span>
-      <span class="countdown-label">Days</span>
+    <!-- Sticky Countdown with Animation -->
+    <div id="countdownBar" class="sticky top-0 bg-indigo-700 text-white flex justify-center items-center gap-6 py-2 px-4 z-50 transition-all duration-300">
+      <div class="font-semibold text-lg mr-4 animate-fade-in-up">Marathon starts in:</div>
+      
+      <div class="countdown-item animate-fade-in-up delay-75">
+        <span class="countdown-value" id="sticky-days">--</span>
+        <span class="countdown-label">Days</span>
+      </div>
+      <div class="countdown-item animate-fade-in-up delay-100">
+        <span class="countdown-value" id="sticky-hours">--</span>
+        <span class="countdown-label">Hours</span>
+      </div>
+      <div class="countdown-item animate-fade-in-up delay-150">
+        <span class="countdown-value" id="sticky-minutes">--</span>
+        <span class="countdown-label">Minutes</span>
+      </div>
+      <div class="countdown-item animate-fade-in-up delay-150">
+        <span class="countdown-value" id="sticky-seconds">--</span>
+        <span class="countdown-label">Seconds</span>
+      </div>
     </div>
-    <div class="countdown-item">
-      <span id="sticky-hours" class="countdown-value">00</span>
-      <span class="countdown-label">Hours</span>
-    </div>
-    <div class="countdown-item">
-      <span id="sticky-minutes" class="countdown-value">00</span>
-      <span class="countdown-label">Minutes</span>
-    </div>
-    <div class="countdown-item">
-      <span id="sticky-seconds" class="countdown-value">00</span>
-      <span class="countdown-label">Seconds</span>
-    </div>
-  </div>
 
 
     <!-- AOS Animation JS -->
@@ -78,6 +80,7 @@
 
 
     <!-- Marathon Event Details Section with AOS -->
+
     <section class="py-10">
     <div class="max-w-6xl mx-auto px-4">
         <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
@@ -89,10 +92,17 @@
             <div class="text-4xl mb-2">📍</div>
             <h4 class="font-semibold text-lg mb-1">Location</h4>
             <p class="text-sm text-gray-700">Shivaji nagar Police Ground, Pune</p>
+            <a href="https://maps.google.com/?q=Shivaji+nagar+Police+Ground+Pune" target="_blank"
+              class="inline-block mt-2 px-3 py-1 text-sm bg-blue-200 text-white rounded-full hover:bg-blue-700 transition-all">
+              View on Map
+            </a>
+
         </div>
 
         <div data-aos="fade-up" data-aos-delay="100" class="bg-blue-100 p-6 rounded-lg shadow-md text-center transform transition duration-300 hover:scale-105">
-            <div class="text-4xl mb-2">📅</div>
+            <div class="flex justify-center mb-2">
+              <img src="image/calendar-oct5.png" alt="Calendar Date" class="h-12 w-12">
+            </div>
             <h4 class="font-semibold text-lg mb-1">Date & Time</h4>
             <p class="text-sm text-gray-700">5 October 2025 | 6:00 AM</p>
         </div>
@@ -148,6 +158,43 @@
         
       </div>
     </section>
+
+
+    <!--QNA-->
+    <section class="max-w-3xl mx-auto px-4 py-10">
+  <h2 class="text-3xl font-bold text-center mb-8 text-blue-700">Frequently Asked Questions</h2>
+
+  <div class="space-y-4">
+    <!-- FAQ Item 1 -->
+    <div class="border rounded-lg shadow">
+      <button class="w-full flex justify-between items-center px-4 py-3 text-left font-medium faq-toggle focus:outline-none">
+        <span>What is the date of the marathon?</span>
+        <svg class="w-5 h-5 transition-transform transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div class="faq-content px-4 pb-4 hidden text-gray-700">
+        The marathon will be held on <strong>October 5, 2025</strong>.
+      </div>
+    </div>
+
+    <!-- FAQ Item 2 -->
+    <div class="border rounded-lg shadow">
+      <button class="w-full flex justify-between items-center px-4 py-3 text-left font-medium faq-toggle focus:outline-none">
+        <span>How do I register?</span>
+        <svg class="w-5 h-5 transition-transform transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div class="faq-content px-4 pb-4 hidden text-gray-700">
+        Click on the <strong>"Register Now"</strong> button at the top or scroll to the registration section.
+      </div>
+    </div>
+
+      <!-- Add more FAQs as needed -->
+    </div>
+  </section>
+
 
     <!-- Footer -->
     <footer class="bg-blue-600 text-white text-center py-1 text-sm">
